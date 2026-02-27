@@ -61,12 +61,12 @@ export default defineConfig({
     preserveScriptOrder: true,
     fonts: [
       {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
+        name: "Noto Sans JP",
+        cssVariable: "--font-noto-sans-jp",
         provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
-        styles: ["normal", "italic"],
+        fallbacks: ["sans-serif"],
+        weights: [300, 400, 500, 700, 900],
+        styles: ["normal"],
       },
     ],
   },

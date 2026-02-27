@@ -117,3 +117,30 @@
     }
   }
 }
+
+@layer components {
+  .toc-panel {
+    @apply text-sm leading-6 text-foreground;
+  }
+
+  .toc-panel summary {
+    @apply cursor-pointer font-semibold text-foreground;
+  }
+
+  .toc-panel details {
+    @apply block;
+  }
+
+  .toc-panel ul,
+  .toc-panel ol {
+    @apply mt-3 space-y-1 pl-4;
+  }
+
+  .toc-panel li {
+    @apply marker:text-accent;
+  }
+
+  .toc-panel a {
+    @apply text-foreground decoration-dashed underline-offset-4 hover:text-accent;
+  }
+}

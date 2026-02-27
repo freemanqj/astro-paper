@@ -9,6 +9,7 @@ import EditPost from "@/components/EditPost.astro";
 import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
+import Card from "@/components/Card.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
@@ -80,6 +81,46 @@ const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
 const prevPost = currentPostIndex !== 0 ? allPosts[currentPostIndex - 1] : null;
 const nextPost =
   currentPostIndex !== allPosts.length ? allPosts[currentPostIndex + 1] : null;
+
+const MAX_RELATED_POSTS = 4;
+const currentTags = new Set(
+  (post.data.tags ?? []).map(tag => tag.toLowerCase())
+);
+const otherPosts = posts.filter(otherPost => otherPost.id !== post.id);
+const getPostTime = (entry: CollectionEntry<"blog">) =>
+  new Date(entry.data.modDatetime ?? entry.data.pubDatetime).getTime();
+
+const tagMatchedPosts = otherPosts
+  .map(otherPost => {
+    const score = (otherPost.data.tags ?? []).reduce((acc, tag) => {
+      return acc + (currentTags.has(tag.toLowerCase()) ? 1 : 0);
+    }, 0);
+    return { post: otherPost, score };
+  })
+  .filter(item => item.score > 0)
+  .sort(
+    (a, b) =>
+      b.score - a.score || getPostTime(b.post) - getPostTime(a.post)
+  )
+  .map(item => item.post);
+
+const relatedPosts: CollectionEntry<"blog">[] = [];
+const relatedPostIds = new Set<string>();
+
+for (const candidate of tagMatchedPosts) {
+  if (relatedPosts.length >= MAX_RELATED_POSTS) break;
+  relatedPosts.push(candidate);
+  relatedPostIds.add(candidate.id);
+}
+
+if (relatedPosts.length < MAX_RELATED_POSTS) {
+  for (const candidate of otherPosts) {
+    if (relatedPosts.length >= MAX_RELATED_POSTS) break;
+    if (relatedPostIds.has(candidate.id)) continue;
+    relatedPosts.push(candidate);
+    relatedPostIds.add(candidate.id);
+  }
+}
 ---
 
 <Layout {...layoutProps}>
@@ -98,21 +139,30 @@ const nextPost =
     </h1>
     <div class="my-2 flex items-center gap-2">
       <Datetime {pubDatetime} {modDatetime} {timezone} size="lg" />
-      <span
+      <!-- <span
         aria-hidden="true"
         class:list={[
           "max-sm:hidden",
           { hidden: !SITE.editPost.enabled || hideEditPost },
         ]}>|</span
-      >
-      <EditPost {hideEditPost} {post} class="max-sm:hidden" />
+      > -->
+      <!-- <EditPost {hideEditPost} {post} class="max-sm:hidden" /> -->
     </div>
-    <article
-      id="article"
-      class="app-prose mt-8 w-full max-w-app prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
-    >
-      <Content />
-    </article>
+    <div class="mt-8 grid gap-10 lg:grid-cols-[minmax(0,1fr)_16rem] xl:grid-cols-[minmax(0,1fr)_18rem]">
+      <article
+        id="article"
+        class="app-prose w-full max-w-none prose-pre:bg-(--shiki-light-bg) dark:prose-pre:bg-(--shiki-dark-bg)"
+      >
+        <Content />
+      </article>
+      <aside
+        id="toc-aside"
+        class="toc-aside self-start lg:sticky lg:top-24"
+        aria-label="Table of contents"
+      >
+        <div id="toc-container" class="toc-panel"></div>
+      </aside>
+    </div>
 
     <hr class="my-8 border-dashed" />
 
@@ -121,6 +171,21 @@ const nextPost =
     <ul class="mt-4 mb-8 flex flex-wrap gap-4 sm:my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} tagName={tag} size="sm" />)}
     </ul>
+
+    {
+      relatedPosts.length > 0 && (
+        <section class="my-8">
+          <h2 class="text-lg font-bold tracking-tight uppercase border-l-2 border-blue pl-3 mb-6">
+            Recommond
+          </h2>
+          <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {relatedPosts.map(data => (
+              <Card variant="h3" {...data} />
+            ))}
+          </ul>
+        </section>
+      )
+    }
 
     <BackToTopButton />
 
@@ -164,6 +229,54 @@ const nextPost =
 </Layout>
 
 <script is:inline data-astro-rerun>
+  function moveTocToAside() {
+    const tocAside = document.getElementById("toc-aside");
+    const tocContainer = document.getElementById("toc-container");
+    if (!tocAside || !tocContainer) return;
+    if (tocContainer.children.length > 0) return;
+
+    const detailsToc = Array.from(document.querySelectorAll("details")).find(
+      detail =>
+        detail
+          .querySelector("summary")
+          ?.textContent?.trim()
+          .toLowerCase()
+          .includes("table of contents")
+    );
+
+    if (detailsToc) {
+      detailsToc.open = true;
+      tocContainer.appendChild(detailsToc);
+      const headingToc = Array.from(document.querySelectorAll("h2")).find(
+        heading =>
+          heading.textContent?.trim().toLowerCase() === "table of contents"
+      );
+      headingToc?.remove();
+      return;
+    }
+
+    const headingToc = Array.from(document.querySelectorAll("h2")).find(
+      heading =>
+        heading.textContent?.trim().toLowerCase() === "table of contents"
+    );
+
+    if (headingToc) {
+      const list = headingToc.nextElementSibling;
+      const wrapper = document.createElement("div");
+      wrapper.appendChild(headingToc);
+      if (
+        list &&
+        (list.matches("ul, ol, nav") || list.querySelector("ul, ol"))
+      ) {
+        wrapper.appendChild(list);
+      }
+      tocContainer.appendChild(wrapper);
+      return;
+    }
+
+    tocAside.style.display = "none";
+  }
+
   /** Create a progress indicator
    *  at the top */
   function createProgressBar() {
@@ -183,6 +296,7 @@ const nextPost =
     // Append the progress container to the document body or any other desired parent element
     document.body.appendChild(progressContainer);
   }
+  moveTocToAside();
   createProgressBar();
 
   /** Update the progress bar

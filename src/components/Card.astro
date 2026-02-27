@@ -6,28 +6,70 @@ import Datetime from "./Datetime.astro";
 
 type Props = {
   variant?: "h2" | "h3";
+  cardLayout?: "vertical" | "horizontal";
 } & CollectionEntry<"blog">;
 
-const { variant: Heading = "h2", id, data, filePath } = Astro.props;
+const { variant: Heading = "h2", cardLayout = "vertical", id, data, filePath } = Astro.props;
 
-const { title, description, ...props } = data;
+const { title, description, ogImage, ...props } = data;
+
+const imgSrc = ogImage
+  ? typeof ogImage === "string"
+    ? ogImage
+    : (ogImage as { src: string }).src
+  : null;
 ---
 
-<li class="my-6">
-  <a
-    href={getPath(id, filePath)}
-    class:list={[
-      "inline-block text-lg font-medium text-accent",
-      "decoration-dashed underline-offset-4 hover:underline",
-      "focus-visible:no-underline focus-visible:underline-offset-0",
-    ]}
-  >
-    <Heading
-      style={{ viewTransitionName: slugifyStr(title.replaceAll(".", "-")) }}
+{cardLayout === "horizontal" ? (
+  <li class="block border border-border bg-background transition-colors hover:border-accent">
+    <a
+      href={getPath(id, filePath)}
+      class="flex items-stretch focus-visible:no-underline focus-visible:outline-none focus:ring-2 focus:ring-accent group"
     >
-      {title}
-    </Heading>
-  </a>
-  <Datetime {...props} />
-  <p>{description}</p>
-</li>
+      <div class="flex-1 p-5">
+        <Heading
+          class="text-base font-bold text-accent group-hover:underline decoration-dashed underline-offset-4"
+          style={{ viewTransitionName: slugifyStr(String(title).replaceAll(".", "-")) }}
+        >
+          {String(title)}
+        </Heading>
+        <div class="mt-1.5 text-xs text-foreground/60">
+          <Datetime pubDatetime={props.pubDatetime as Date} modDatetime={props.modDatetime as Date | undefined | null} />
+        </div>
+        <p class="mt-2 text-sm text-foreground/80 line-clamp-2">{description}</p>
+      </div>
+      {imgSrc && (
+        <div class="hidden sm:block w-36 shrink-0 bg-muted border-l border-border overflow-hidden">
+          <img src={imgSrc} alt={String(title)} class="w-full h-full object-cover" />
+        </div>
+      )}
+    </a>
+  </li>
+) : (
+  <li class="block border border-border bg-background transition-colors hover:border-accent">
+    <a
+      href={getPath(id, filePath)}
+      class="block focus-visible:no-underline focus-visible:outline-none focus:ring-2 focus:ring-accent group"
+    >
+      <div class="w-full h-32 sm:h-36 bg-muted overflow-hidden border-b border-border">
+        {imgSrc ? (
+          <img src={imgSrc} alt={String(title)} class="w-full h-full object-cover" />
+        ) : (
+          <div class="w-full h-full flex items-center justify-center text-foreground/20 text-xs uppercase tracking-widest">No Image</div>
+        )}
+      </div>
+      <div class="p-4">
+        <Heading
+          class="text-base font-bold text-accent group-hover:underline decoration-dashed underline-offset-4"
+          style={{ viewTransitionName: slugifyStr(String(title).replaceAll(".", "-")) }}
+        >
+          {String(title)}
+        </Heading>
+        <div class="mt-1.5 text-xs text-foreground/60">
+          <Datetime pubDatetime={props.pubDatetime as Date} modDatetime={props.modDatetime as Date | undefined | null} />
+        </div>
+        <p class="mt-2 text-sm text-foreground/80 line-clamp-2">{description}</p>
+      </div>
+    </a>
+  </li>
+)}
