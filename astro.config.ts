@@ -55,6 +55,26 @@ export default defineConfig({
         context: "client",
         optional: true,
       }),
+      PUBLIC_GOOGLE_ANALYTICS_ID: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
+      PUBLIC_PLAUSIBLE_DOMAIN: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
+      PUBLIC_PLAUSIBLE_SCRIPT_URL: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
+      PUBLIC_ADSENSE_CLIENT: envField.string({
+        access: "public",
+        context: "client",
+        optional: true,
+      }),
     },
   },
   experimental: {

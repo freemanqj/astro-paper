@@ -1,0 +1,17 @@
+---
+import { PUBLIC_ADSENSE_CLIENT } from "astro:env/client";
+---
+
+{
+  PUBLIC_ADSENSE_CLIENT && (
+    <>
+      <meta name="google-adsense-account" content={PUBLIC_ADSENSE_CLIENT} />
+      <script
+        async
+        is:inline
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${PUBLIC_ADSENSE_CLIENT}`}
+        crossorigin="anonymous"
+      />
+    </>
+  )
+}
