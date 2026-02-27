@@ -13,6 +13,7 @@ type Props = {
   pubDatetime: string | Date;
   timezone?: string;
   modDatetime?: string | Date | null;
+  size?: "sm" | "md" | "lg";
 };
 
 const {
@@ -21,6 +22,7 @@ const {
 
   class: className = "",
   timezone: postTimezone,
+  size = "sm",
 } = Astro.props;
 
 /* ========== Formatted Datetime ========== */
@@ -31,16 +33,22 @@ const datetime = dayjs(isModified ? modDatetime : pubDatetime).tz(
 );
 
 const date = datetime.format("YYYY.MM.DD"); // e.g., '2026.05.24'
+
+const sizeClass = {
+  sm: "text-xs",
+  md: "text-sm",
+  lg: "text-base",
+}[size];
 ---
 
 <div class:list={["flex items-center gap-x-1 opacity-60", className]}>
   {
     isModified && (
-      <span class="text-xs">Updated:</span>
+      <span class={sizeClass}>Updated:</span>
     )
   }
   <time
-    class="text-xs"
+    class={sizeClass}
     datetime={datetime.toISOString()}>{date}</time
   >
 </div>
