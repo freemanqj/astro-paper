@@ -1,7 +1,7 @@
 ---
 const serverURL = import.meta.env.PUBLIC_WALINE_SERVER_URL ?? "";
 const lang = import.meta.env.PUBLIC_WALINE_LANG ?? "ja";
-const pagePath = Astro.url.pathname;
+const pagePath = `${Astro.url.host}${Astro.url.pathname}`;
 ---
 
 <link
@@ -24,7 +24,11 @@ const pagePath = Astro.url.pathname;
 <style>
   :global(#waline .wl-power),
   :global(#waline .wl-footer a),
-  :global(#waline .wl-rss) {
+  :global(#waline .wl-rss),
+  :global(#waline .wl-user-avatar),
+  :global(#waline .wl-user-agent),
+  :global(#waline .wl-badge),
+  :global(#waline .wl-meta) {
     display: none !important;
   }
 </style>
@@ -32,14 +36,22 @@ const pagePath = Astro.url.pathname;
 <script type="module">
   import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.js";
 
-  const el = document.getElementById("waline");
-  if (el) {
+  function mountWaline() {
+    const el = document.getElementById("waline");
+    if (!el || el.dataset.walineInit === "1") return;
+    el.dataset.walineInit = "1";
+
     const serverURL = el.dataset.serverUrl || "";
     const path = el.dataset.pagePath || window.location.pathname;
     const lang = el.dataset.lang || "ja";
+    const getTheme = () =>
+      document.documentElement.getAttribute("data-theme") === "dark"
+        ? "dark"
+        : "light";
 
+    let waline;
     if (serverURL) {
-      init({
+      waline = init({
         el,
         serverURL,
         path,
@@ -50,9 +62,57 @@ const pagePath = Astro.url.pathname;
         reaction: false,
         imageUploader: false,
         uploadImage: false,
+        theme: getTheme(),
       });
     } else {
       console.warn("[waline] missing serverURL; check PUBLIC_WALINE_SERVER_URL");
     }
+
+    const observer = new MutationObserver(() => {
+      try {
+        waline?.update?.({ theme: getTheme() });
+      } catch (_) {
+        // noop
+      }
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme"],
+    });
   }
+
+  function lazyMount() {
+    const el = document.getElementById("waline");
+    if (!el) return;
+
+    const start = () => {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(() => mountWaline());
+      } else {
+        setTimeout(() => mountWaline(), 0);
+      }
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      start();
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries.some(entry => entry.isIntersecting)) {
+          observer.disconnect();
+          start();
+        }
+      },
+      { rootMargin: "200px 0px" }
+    );
+
+    observer.observe(el);
+  }
+
+  lazyMount();
+  document.addEventListener("astro:page-load", lazyMount);
+  document.addEventListener("astro:after-swap", lazyMount);
 </script>

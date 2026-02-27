@@ -4,6 +4,8 @@
   /* ===== Override default Tailwind Typography styles ===== */
   .app-prose {
     @apply prose;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 
     h1,
     h2,
@@ -52,6 +54,8 @@
     }
 
     table {
+      @apply block max-w-full overflow-x-auto;
+
       th,
       td {
         @apply border border-border p-2;
@@ -87,13 +91,13 @@
     }
 
     pre {
-      @apply focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
+      @apply max-w-full overflow-x-auto focus-visible:border-transparent focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-dashed;
     }
   }
 
   /* ===== Code Blocks & Syntax Highlighting ===== */
   .astro-code {
-    @apply flex border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
+    @apply flex max-w-full overflow-x-auto border bg-(--shiki-light-bg) text-(--shiki-light) outline-border [&_span]:text-(--shiki-light);
   }
 
   html[data-theme="dark"] .astro-code {
