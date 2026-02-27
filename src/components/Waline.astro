@@ -1,0 +1,58 @@
+---
+const serverURL = import.meta.env.PUBLIC_WALINE_SERVER_URL ?? "";
+const lang = import.meta.env.PUBLIC_WALINE_LANG ?? "ja";
+const pagePath = Astro.url.pathname;
+---
+
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+/>
+
+<section class="mt-10">
+  <h2 class="mb-4 text-lg font-bold tracking-tight uppercase border-l-2 border-blue pl-3">
+    コメント
+  </h2>
+  <div
+    id="waline"
+    data-server-url={serverURL}
+    data-page-path={pagePath}
+    data-lang={lang}
+  ></div>
+</section>
+
+<style>
+  :global(#waline .wl-power),
+  :global(#waline .wl-footer a),
+  :global(#waline .wl-rss) {
+    display: none !important;
+  }
+</style>
+
+<script type="module">
+  import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.js";
+
+  const el = document.getElementById("waline");
+  if (el) {
+    const serverURL = el.dataset.serverUrl || "";
+    const path = el.dataset.pagePath || window.location.pathname;
+    const lang = el.dataset.lang || "ja";
+
+    if (serverURL) {
+      init({
+        el,
+        serverURL,
+        path,
+        lang,
+        login: "disable",
+        requiredMeta: ["nick", "mail"],
+        avatar: "mp",
+        reaction: false,
+        imageUploader: false,
+        uploadImage: false,
+      });
+    } else {
+      console.warn("[waline] missing serverURL; check PUBLIC_WALINE_SERVER_URL");
+    }
+  }
+</script>

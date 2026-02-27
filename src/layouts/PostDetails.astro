@@ -10,6 +10,7 @@ import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import Card from "@/components/Card.astro";
+import Waline from "@/components/Waline.astro";
 import { getPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import IconChevronLeft from "@/assets/icons/IconChevronLeft.svg";
@@ -190,6 +191,8 @@ if (relatedPosts.length < MAX_RELATED_POSTS) {
     <BackToTopButton />
 
     <ShareLinks />
+
+    <Waline />
 
     <hr class="my-6 border-dashed" />
 
