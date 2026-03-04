@@ -33,7 +33,7 @@ const pagePath = `${Astro.url.host}${Astro.url.pathname}`;
   }
 </style>
 
-<script type="module">
+<script is:inline type="module">
   import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.js";
 
   function mountWaline() {
@@ -49,29 +49,26 @@ const pagePath = `${Astro.url.host}${Astro.url.pathname}`;
         ? "dark"
         : "light";
 
-    let waline;
-    if (serverURL) {
-      waline = init({
-        el,
-        serverURL,
-        path,
-        lang,
-        login: "disable",
-        requiredMeta: ["nick", "mail"],
-        avatar: "mp",
-        reaction: false,
-        imageUploader: false,
-        uploadImage: false,
-        theme: getTheme(),
-      });
-    } else {
-      console.warn("[waline] missing serverURL; check PUBLIC_WALINE_SERVER_URL");
-    }
+    if (!serverURL) return;
+
+    const waline = init({
+      el,
+      serverURL,
+      path,
+      lang,
+      login: "disable",
+      requiredMeta: ["nick", "mail"],
+      avatar: "mp",
+      reaction: false,
+      imageUploader: false,
+      uploadImage: false,
+      theme: getTheme(),
+    });
 
     const observer = new MutationObserver(() => {
       try {
         waline?.update?.({ theme: getTheme() });
-      } catch (_) {
+      } catch {
         // noop
       }
     });
