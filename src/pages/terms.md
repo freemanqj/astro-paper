@@ -1,30 +1,50 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "Terms"
+title: "利用規約"
 ---
 
-By accessing this site, you agree to these terms.
+本利用規約（以下「本規約」）は、NEUROVA AI（以下「当サイト」）の利用条件を定めるものです。利用者は、当サイトを閲覧または利用した時点で、本規約に同意したものとみなします。
 
-## Use of content
+## コンテンツの利用について
 
-All content is provided for informational purposes. You may not republish or redistribute content without permission, unless otherwise stated.
+当サイトに掲載している記事、文章、画像、構成その他のコンテンツは、個人運営ブログとして情報提供を目的に公開しています。
 
-## Acceptable use
+引用については、著作権法その他の法令の範囲内で、出典を明記した適切な方法に限り認めます。全文転載、無断複製、再配布、内容を誤解させる形での利用は認めません。
 
-You agree not to misuse the site, attempt to disrupt services, or violate applicable laws.
+## 禁止事項
 
-## Links to other sites
+利用者は、以下の行為を行ってはなりません。
 
-This site may link to third-party websites. We are not responsible for their content or practices.
+- 法令または公序良俗に反する行為
+- 当サイトまたは第三者の権利、利益、名誉、信用等を侵害する行為
+- 不正アクセス、過度な負荷、スパム送信など、当サイトの運営を妨げる行為
+- 掲載内容を改ざんして転載する行為、または誤認を招く形で利用する行為
 
-## Disclaimer
+## 外部サイトへのリンク
 
-The site is provided "as is" without warranties of any kind. We do not guarantee accuracy, completeness, or availability.
+当サイトでは、参考情報として外部サイトへのリンクを掲載することがあります。リンク先サイトの内容、安全性、正確性、提供サービス等について、当サイトは責任を負いません。
 
-## Changes
+## 免責事項
 
-We may update these terms at any time. Continued use of the site means you accept the updated terms.
+当サイトは、AI 関連の論文、ツール、プロダクトに関する情報を、運営者自身が調査・試用した範囲で発信していますが、その内容の正確性、完全性、有用性、最新性を保証するものではありません。
 
-## Contact
+当サイトに掲載された情報に基づいて行動したことにより生じた損害、トラブル、損失について、当サイト運営者は責任を負いません。
 
-If you have questions about these terms, please contact us via the site contact method.
+また、当サイトは予告なく内容の変更、更新、中断、終了を行うことがあります。
+
+## コメント・問い合わせ等について
+
+当サイトにコメント機能や問い合わせ手段が設けられている場合、運営者は、以下に該当すると判断した内容について、事前の通知なく非公開、削除、返信差し控え等の対応を行うことがあります。
+
+- 誹謗中傷、差別的表現、過度な宣伝、スパムに該当する内容
+- 違法行為を助長する内容
+- 当サイトの趣旨と著しく無関係な内容
+- その他、運営上不適切と判断した内容
+
+## 規約の変更
+
+本規約は、必要に応じて予告なく改定することがあります。改定後の規約は、当サイト上に掲載した時点で効力を生じ、以後の利用には改定後の内容が適用されます。
+
+## お問い合わせ
+
+本規約に関するお問い合わせは、`neurovaidev@gmail.com` までご連絡ください。

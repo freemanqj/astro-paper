@@ -31,14 +31,14 @@ const { tag } = params;
 const { page, tagName } = Astro.props;
 ---
 
-<Layout title={`Tag: ${tagName} | ${SITE.title}`}>
+<Layout title={`タグ「${tagName}」の記事一覧 | ${SITE.title}`}>
   <Header />
   <Main
-    pageTitle={[`Tag:`, `${tagName}`]}
+    pageTitle={["タグ", `${tagName}`]}
     titleTransition={tag}
-    pageDesc={`All the articles with the tag "${tagName}".`}
+    pageDesc={`タグ「${tagName}」が付いた記事をまとめています。`}
   >
-    <h1 slot="title" transition:name={tag}>{`Tag:${tag}`}</h1>
+    <h1 slot="title" transition:name={tag}>{`タグ:${tagName}`}</h1>
     <ul class="flex flex-col gap-3">
       {page.data.map(data => <Card cardLayout="horizontal" {...data} />)}
     </ul>

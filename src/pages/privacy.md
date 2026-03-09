@@ -1,32 +1,61 @@
 ---
 layout: ../layouts/AboutLayout.astro
-title: "Privacy"
+title: "プライバシーポリシー"
 ---
 
-We respect your privacy and keep data collection minimal.
+NEUROVA AI（以下「当サイト」）は、個人で運営している AI 関連ブログです。論文、ツール、プロダクトを実際に触って得た知見を共有する場として、利用者のプライバシーに配慮しながら、必要最小限の情報のみを取り扱います。
 
-## Information we collect
+当サイトのサイト名、ドメイン、連絡先は以下のとおりです。
 
-- Basic usage data (for example, page views and referrers) if analytics is enabled.
-- Information you provide directly, such as emails sent to us.
+- サイト名: NEUROVA AI
+- ドメイン: `neurovai.dev`
+- 連絡先: `neurovaidev@gmail.com`
 
-## How we use information
+## 取得する情報
 
-- To understand site performance and improve content.
-- To respond to support requests.
+当サイトでは、主に以下の情報を取得することがあります。
 
-## Cookies
+- アクセス日時、閲覧ページ、参照元、利用端末、ブラウザ種別などのアクセスに関する情報
+- Cookie など、サイトの表示や利用状況の把握に必要な情報
+- お問い合わせやご連絡の際に、利用者ご本人が任意で提供した氏名、メールアドレス、本文等の情報
 
-We may use cookies or similar technologies for analytics and performance. You can disable cookies in your browser settings.
+## 利用目的
 
-## Third-party services
+- ブログの改善、記事内容の見直し、人気コンテンツの把握のため
+- 不正利用、スパム、迷惑行為への対応のため
+- お問い合わせへの返信、必要なご案内のため
+- サイト運営上必要な範囲で、障害調査や表示最適化を行うため
 
-If we use third-party services (for example, analytics or embedded media), those providers may collect information under their own policies.
+## Cookie について
 
-## Data retention
+当サイトでは、アクセス解析や利便性向上のために Cookie 等の技術を利用する場合があります。Cookie により個人を直接特定することは意図していません。
 
-We retain data only as long as needed for the purposes described above.
+Cookie の利用を望まない場合は、ブラウザの設定により無効化できます。ただし、その場合は一部の機能や表示に影響が出ることがあります。
 
-## Contact
+## 外部サービスの利用
 
-If you have questions about this policy, please contact us via the site contact method.
+当サイトでは、アクセス解析、埋め込みコンテンツ、外部リンク等を利用することがあります。これらの外部サービス上での情報の取り扱いは、各提供元の規約やプライバシーポリシーに従います。
+
+YouTube、X、GitHub、各種 AI サービス提供元のページなど、外部サイトへ遷移した後の情報管理について、当サイトは責任を負いません。
+
+## 個人情報の第三者提供
+
+当サイトは、法令に基づく場合を除き、利用者本人の同意なく個人情報を第三者へ提供しません。
+
+## 情報の保管期間
+
+取得した情報は、利用目的の達成に必要な期間に限って保管し、不要となった後は適切な方法で削除または管理します。
+
+## 免責事項
+
+当サイトに掲載する情報は、できる限り正確で実用的な内容を心がけていますが、正確性、完全性、最新性を保証するものではありません。記事中で紹介するツール、サービス、価格、仕様等は、掲載後に変更される可能性があります。
+
+当サイトの情報を利用したことにより生じた損害について、当サイト運営者は責任を負いません。
+
+## ポリシーの変更
+
+本ポリシーは、法令の改正や運営内容の変更に応じて、予告なく改定することがあります。変更後の内容は、当サイト上に掲載した時点で効力を生じるものとします。
+
+## お問い合わせ
+
+本ポリシーに関するお問い合わせは、`neurovaidev@gmail.com` までご連絡ください。
