@@ -5,7 +5,7 @@ modDatetime: 2025-06-13T16:52:45.934Z
 title: 朝貢関係の底辺ロジック：絶対的な実力がなければ、すべては空論に過ぎない
 slug: adding-new-posts-in-astropaper-theme
 featured: true
-draft: false
+draft: true
 ogImage: ../../assets/images/forrest-gump-quote.png
 tags:
   - docs
@@ -13,6 +13,7 @@ description:
   Some rules & recommendations for creating or adding new posts using AstroPaperr
   theme.
 ---
+<img width="1585" height="779" alt="3a13f36d-1fff-4758-9209-4f0942ebdce5" src="https://github.com/user-attachments/assets/45792d28-3da3-4ec4-bfbd-9b82bd053322" />
 
 
 1429年の秋、潮が引き、川面がようやく穏やかになった。福州五虎門の沖に、突然、三隻の大帆船が漂ってきた。いずれも琉球（現在の日本沖縄）中山王の旗を掲げた福船である。
