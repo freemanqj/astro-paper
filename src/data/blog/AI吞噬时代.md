@@ -15,6 +15,8 @@ tags:
   - 中間層
 description: 10年のキャリアを持つインターネット従事者が、AIがソフトウェア産業を根本から変え、開発の民主化・SaaSの変質・UIの淘汰・組織構造の変革を引き起こす現実を語る。
 ---
+<img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/d8aabd04-7417-4444-bbb1-c8bdd72125d2" />
+
 
 ## AIがソフトウェアを飲み込む時代
 この文章は長い時間をかけて執筆した、長文のエッセイです。
@@ -26,8 +28,11 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 たった一言が書かれていました。
 
 **Software was eaten by AI.**
+<img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/a8d1134e-c3ec-4172-bd56-9dc2462ea726" />
+
 
 訳すと「ソフトウェアはAIに飲み込まれつつある」となります。これは2011年8月20日、マーク・アンドレーセンが発表した有名な論文『Why Software Is Eating the World』に対する言葉です。
+<img width="691" height="436" alt="image" src="https://github.com/user-attachments/assets/df5d93c1-6726-46a1-8f02-eeb942cac9be" />
 
 論文の冒頭には、シリコンバレーの信仰となった名言が刻まれています。
 **Software is eating the world. ソフトウェアが世界を飲み込む。**
@@ -47,6 +52,8 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 世界を飲み込んだソフトウェアが、今度は飲み込まれる側になったのです。
 
 あるテクノロジー従事者はこう話していました。
+<img width="692" height="557" alt="image" src="https://github.com/user-attachments/assets/a62a17e0-85b2-4b3a-800c-070b77ede4ca" />
+
 「一つの時代の終わりであり、まったく異なる何かの始まりだ」
 
 まさに時代の狭間で、10年の経験を持つ私がソフトウェアの未来について5つの視点で語ります。
@@ -90,6 +97,8 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 しかし今、この前提が崩れています。
 2026年1月末時点で、大半のSaaS株は52週高値から30%～80%も下落。3月になった今でも、さらに下落している企業が目立ちます。
 
+<img width="692" height="591" alt="image" src="https://github.com/user-attachments/assets/a26c0e4f-4c65-4a9d-9464-0e9fa2d954e3" />
+
 ソフトウェアは**資産から消耗品**へと変わりました。
 資産は長期的に価値を高めるもの。消耗品は使い捨て、簡単に代替可能なものです。
 
@@ -107,6 +116,8 @@ SaaS企業の決算や株価を見れば、この変化は明らかです。
 
 ## エージェントが人と機械の溝を埋める
 2026年1月、**OpenClaw**が世界を騒がせました。
+<img width="692" height="387" alt="image" src="https://github.com/user-attachments/assets/061d4e5c-3c05-4643-a2ae-62d8a0a7c2a2" />
+
 多くの人は単なるオープンソースツールと捉えていますが、私は違うと考えています。
 OpenClawの真の価値は、**一般の人々にエージェントの意味を理解させた**ことにあります。
 
