@@ -28,10 +28,13 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 たった一言が書かれていました。
 
 **Software was eaten by AI.**
-<img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/a8d1134e-c3ec-4172-bd56-9dc2462ea726" />
+
+<img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/d8aabd04-7417-4444-bbb1-c8bdd72125d2" />
+
 
 
 訳すと「ソフトウェアはAIに飲み込まれつつある」となります。これは2011年8月20日、マーク・アンドレーセンが発表した有名な論文『Why Software Is Eating the World』に対する言葉です。
+
 <img width="691" height="436" alt="image" src="https://github.com/user-attachments/assets/df5d93c1-6726-46a1-8f02-eeb942cac9be" />
 
 論文の冒頭には、シリコンバレーの信仰となった名言が刻まれています。
