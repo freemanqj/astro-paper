@@ -16,7 +16,7 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 ---
 <img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/d8aabd04-7417-4444-bbb1-c8bdd72125d2" />
 
-
+## Table of contents
 ## AIがソフトウェアを飲み込む時代
 この文章は長い時間をかけて執筆した、長文のエッセイです。
 10年のキャリアを持つインターネット従事者として、現代におけるソフトウェア、エージェント、組織に対する私の考えを綴り、自身の思考を整理する試みでもあります。
@@ -28,13 +28,13 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 
 **Software was eaten by AI.**
 
-<img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/d8aabd04-7417-4444-bbb1-c8bdd72125d2" />
+<img width="692" height="142" alt="AIがソフトウェアを飲み込む時代-naval" src="https://github.com/user-attachments/assets/d8aabd04-7417-4444-bbb1-c8bdd72125d2" />
 
 
 
 訳すと「ソフトウェアはAIに飲み込まれつつある」となります。これは2011年8月20日、マーク・アンドレーセンが発表した有名な論文『Why Software Is Eating the World』に対する言葉です。
 
-<img width="691" height="436" alt="image" src="https://github.com/user-attachments/assets/df5d93c1-6726-46a1-8f02-eeb942cac9be" />
+<img width="691" height="436" alt="AIがソフトウェアを飲み込む時代-naval" src="https://github.com/user-attachments/assets/df5d93c1-6726-46a1-8f02-eeb942cac9be" />
 
 論文の冒頭には、シリコンバレーの信仰となった名言が刻まれています。
 **Software is eating the world. ソフトウェアが世界を飲み込む。**
@@ -54,7 +54,7 @@ description: 10年のキャリアを持つインターネット従事者が、AI
 世界を飲み込んだソフトウェアが、今度は飲み込まれる側になったのです。
 
 あるテクノロジー従事者はこう話していました。
-<img width="692" height="557" alt="image" src="https://github.com/user-attachments/assets/a62a17e0-85b2-4b3a-800c-070b77ede4ca" />
+<img width="692" height="557" alt="AIがソフトウェアを飲み込む時代-naval" src="https://github.com/user-attachments/assets/a62a17e0-85b2-4b3a-800c-070b77ede4ca" />
 
 「一つの時代の終わりであり、まったく異なる何かの始まりだ」
 
