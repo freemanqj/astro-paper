@@ -21,8 +21,8 @@ const { page } = Astro.props;
 <Layout title={`記事一覧 | ${SITE.title}`}>
   <Header />
   <Main pageTitle="記事一覧" pageDesc="これまでに公開した記事を一覧でご覧いただけます。">
-    <ul class="flex flex-col gap-3">
-      {page.data.map(data => <Card cardLayout="horizontal" {...data} />)}
+    <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      {page.data.map(data => <Card variant="h3" {...data} />)}
     </ul>
   </Main>
 
