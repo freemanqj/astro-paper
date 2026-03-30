@@ -4,8 +4,8 @@ pubDatetime: 2026-03-18T12:00:00Z
 modDatetime: 2026-03-18T12:00:00Z
 title: AIがソフトウェアを飲み込む時代
 slug: ai-is-eating-all-software
-featured: false
-draft: true
+featured: true
+draft: false
 tags:
   - AI
   - ソフトウェア
