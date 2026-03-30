@@ -6,6 +6,7 @@ title: AIがソフトウェアを飲み込む時代
 slug: ai-is-eating-all-software
 featured: true
 draft: false
+ogImage: https://github.com/user-attachments/assets/489f9d79-d286-4681-991e-ba4090c02b91
 tags:
   - AI
   - ソフトウェア
@@ -14,7 +15,8 @@ tags:
   - 中間層
 description: 10年のキャリアを持つインターネット従事者が、AIがソフトウェア産業を根本から変え、開発の民主化・SaaSの変質・UIの淘汰・組織構造の変革を引き起こす現実を語る。
 ---
-<img width="692" height="142" alt="image" src="https://github.com/user-attachments/assets/d8aabd04-7417-4444-bbb1-c8bdd72125d2" />
+<img width="879" height="474" alt="AIがソフトウェアを飲み込む時代-cover" src="https://github.com/user-attachments/assets/489f9d79-d286-4681-991e-ba4090c02b91" />
+
 
 ## Table of contents
 ## AIがソフトウェアを飲み込む時代
@@ -118,7 +120,8 @@ SaaS企業の決算や株価を見れば、この変化は明らかです。
 
 ## エージェントが人と機械の溝を埋める
 2026年1月、**OpenClaw**が世界を騒がせました。
-<img width="692" height="387" alt="image" src="https://github.com/user-attachments/assets/061d4e5c-3c05-4643-a2ae-62d8a0a7c2a2" />
+
+![image](https://github.com/user-attachments/assets/de708c85-a8f5-42d4-b9ef-addd0127731a)
 
 多くの人は単なるオープンソースツールと捉えていますが、私は違うと考えています。
 OpenClawの真の価値は、**一般の人々にエージェントの意味を理解させた**ことにあります。
