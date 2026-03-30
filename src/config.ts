@@ -1,7 +1,7 @@
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
-  author: "Sat Naing",
-  profile: "https://satnaing.dev/",
+  website: "https://neexa.dev/", // replace this with your deployed domain
+  author: "Neexa",
+  profile: "https://neexa.dev/",
   desc: "Neexa は、AIを実際に触り続けるエンジニアの探索記録です。話題のツール、気になるプロダクト、使ってみてわかったこと——次に何が来るか」を、一緒に探しましょう。",
   title: "Neexa",
   ogImage: "neexa-og.webp",
