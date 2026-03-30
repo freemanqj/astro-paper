@@ -6,7 +6,6 @@ title: AIがソフトウェアを飲み込む時代
 slug: ai-is-eating-all-software
 featured: false
 draft: true
-ogImage: ../../assets/images/ai-software.png
 tags:
   - AI
   - ソフトウェア
