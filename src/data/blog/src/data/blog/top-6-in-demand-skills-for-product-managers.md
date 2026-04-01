@@ -1,3 +1,14 @@
+---
+title: Top 6 In-Demand Skills for Product Managers
+publishDate: 2025-01-01
+description: 产品经理必备6大热门技能
+---
+
+# Top 6 In-Demand Skills for Product Managers
+
+正文写在这里…
+
+
 プロダクトのゼロから 1 への立ち上げから、継続的なイテレーションと進化へと至るプロセスは、複数の役割が連携するシステム工学です。開発チームだけでなく、プロダクトマネージャー、オペレーション、データアナリスト、UI/UX デザイナーといった職種が深く関与します。
 
 TRAE ユーザーとの日常的なやり取りの中で、多くのプロダクトマネージャーが業務ワークフローに TRAE IDE を積極的に取り込んでいることを実感しています。
