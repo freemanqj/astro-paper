@@ -6,7 +6,7 @@ title: プロダクトマネージャー必携！TRAE IDE 6つの必須スキル
 slug: top-6-in-demand-skills-for-product-managers
 featured: true
 draft: false
-ogImage: ![](https://imgs.neexa.dev/202604/6-skills_1775027212.webp)
+ogImage: https://imgs.neexa.dev/202604/6-skills_1775027212.webp
 tags:
   - プロダクトマネージャー
   - TRAE IDE
