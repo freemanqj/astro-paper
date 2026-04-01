@@ -1,12 +1,12 @@
 ---
 author: neexa
-pubDatetime: 2026-04-01T12:00:00Z
-modDatetime: 2026-04-01T12:00:00Z
+pubDatetime: 2026-03-31T12:00:00Z
+modDatetime: 2026-03-31T12:00:00Z
 title: プロダクトマネージャー必携！TRAE IDE 6つの必須スキル
 slug: top-6-in-demand-skills-for-product-managers
 featured: true
 draft: false
-ogImage: ""
+ogImage: "![](https://imgs.neexa.dev/202604/%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%866%E4%B8%AAskills%E4%B8%BB%E5%9B%BE_1775025900.webp)"
 tags:
   - プロダクトマネージャー
   - TRAE IDE
