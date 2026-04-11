@@ -1,8 +1,8 @@
 ---
 author: neexa
-pubDatetime: 2026-04-11T10:57:45Z
-modDatetime: 2026-04-11T10:57:45Z
-title: ナヴァル・ラヴィカントに学ぶ「運に頼らずに富を築く」ための実践ガイド
+pubDatetime: 2026-04-10T10:57:45Z
+modDatetime: 2026-04-10T10:57:45Z
+title: 運に頼らない「富」の構築メソッド
 slug: naval-ravikant-wealth-creation-guide-jp
 featured: true
 draft: false
