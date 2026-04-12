@@ -4,8 +4,8 @@ pubDatetime: 2026-04-12T10:00:00Z
 modDatetime: 2026-04-12T10:00:00Z
 title: 2026年UIデザイン最前線：10社の設計思想がプロダクト競争力を塗り替える
 slug: ui-design-landscape-2026-top-companies-design-systems
-featured: false
-draft: true
+featured: true
+draft: false
 ogImage: https://imgs.neexa.dev/202604/2026ui%E8%AE%BE%E8%AE%A13_1775964561.webp
 tags:
   - design-systems
