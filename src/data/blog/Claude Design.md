@@ -1,11 +1,11 @@
 ---
 author: neexa
-pubDatetime: 2026-04-12T10:00:00Z
-modDatetime: 2026-04-12T10:00:00Z
+pubDatetime: 2026-04-18T10:00:00Z
+modDatetime: 2026-04-18T10:00:00Z
 title: Claude Design登場でデザイン業界が激震：AIが制作フローを丸ごと書き換える
 slug: claude-design-ai-disrupting-design-industry
-featured: false
-draft: true
+featured: true
+draft: false
 tags:
   - ai-design
   - claude
