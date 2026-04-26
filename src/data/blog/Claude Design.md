@@ -22,7 +22,7 @@ description: Claude Designの登場により、デザイン制作の流れが根
 
 Claudeが今度はデザイン業界に踏み込んできた。  
 しかも今回は“補助ツール”じゃない。
-![图片一.png](https://imgs.neexa.dev/202604/%E5%9B%BE%E7%89%87%E4%B8%80_1776569777.webp)
+![claudeai.png](https://imgs.neexa.dev/202604/%E5%9B%BE%E7%89%87%E4%B8%80_1776569777.webp)
 
 **ど真ん中への殴り込み。**
 
