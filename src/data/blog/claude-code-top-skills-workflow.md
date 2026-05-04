@@ -4,8 +4,8 @@ pubDatetime: 2026-05-03T00:00:00Z
 modDatetime: 2026-05-03T00:00:00Z
 title: Claude Codeを“使える人”は何が違うのか？優先して入れるべき10のスキル
 slug: claude-code-top-skills-workflow
-featured: false
-draft: true
+featured: true
+draft: false
 ogImage: https://imgs.neexa.dev/202605/claude-code-top-skills-workflow_1777865379.webp
 tags:
   - claude-code
