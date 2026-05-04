@@ -1,7 +1,7 @@
 ---
 author: neexa
-pubDatetime: 2026-05-04T00:00:00Z
-modDatetime: 2026-05-04T00:00:00Z
+pubDatetime: 2026-05-03T00:00:00Z
+modDatetime: 2026-05-03T00:00:00Z
 title: Claude Codeを“使える人”は何が違うのか？優先して入れるべき10のスキル
 slug: claude-code-top-skills-workflow
 featured: false
